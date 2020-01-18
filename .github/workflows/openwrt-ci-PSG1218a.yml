@@ -27,7 +27,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@openwrt-19.07
+        uses: actions/checkout@master
         with:
           ref: openwrt-19.07
 
@@ -151,7 +151,7 @@ jobs:
         run: find ./bin/targets/ -type d -name "packages" | xargs rm -rf {}
 
       - name: Upload artifact
-        uses: actions/upload-artifact@openwrt-19.07
+        uses: actions/upload-artifact@master
         with:
           name: OpenWrt firmware
           path: ./bin/targets/
